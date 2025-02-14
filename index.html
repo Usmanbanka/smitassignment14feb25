@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="containerdiv">
+       
+
+        <div id="topheaderdiv">
+            <!-- TopHeaderDiv -->
+            <div id="hamburgerdiv">
+                <!-- <svg id="hamburgersvg" focusable="false" viewBox="0 0 40 40" preserveAspectRatio="none"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg> -->
+                <svg id="hamburgersvg" focusable="false" viewBox="0 0 21 18" width="21" height="18">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </svg>
+                
+            </div><!-- Hamburger -->
+            
+            <div id="GmailLogoDiv">
+                <img src="images/logo_gmail.png" alt="">
+            </div>
+            <div id="SearchDiv">
+                <div id="searchicon">
+                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 21 3 C 11.622998 3 4 10.623005 4 20 C 4 29.376995 11.622998 37 21 37 C 24.712383 37 28.139151 35.791079 30.9375 33.765625 L 44.085938 46.914062 L 46.914062 44.085938 L 33.886719 31.058594 C 36.443536 28.083 38 24.223631 38 20 C 38 10.623005 30.377002 3 21 3 z M 21 5 C 29.296122 5 36 11.703883 36 20 C 36 28.296117 29.296122 35 21 35 C 12.703878 35 6 28.296117 6 20 C 6 11.703883 12.703878 5 21 5 z"/></svg>
+                </div>
+                <div id="SearchMailTextDiv">
+                    <input type="text" id="search-input" placeholder="Search Mail">
+                </div>
+                <div id="filtericon">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAATUlEQVR4nGNgGCngPxIevBb8JxLDALHq6GfB0I+DQQf+D7pg+08BhgGqJNP/5Fow9OOAbuD/kPX6fwoKtv/klqZUtQCbYSMs+TEMBAAAkFyPcUq0r24AAAAASUVORK5CYII=" alt="horizontal-settings-mixer--v1">
+                </div>
+                
+            </div>
+            <div id="QuestionMarkdiv">
+                <svg class="t7" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="#000000" focusable="false"><path fill="none" d="M0 0h24v24H0z"></path><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"></path></svg>
+            </div>
+            <div id="SettingsGearDiv">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC2UlEQVR4nO2av2sUQRTHP8FgUHMngtHCHwg5UCNioqIRS7HRXi099A8wxM4YECGiYv6CWNl5iIWtgoVGLKKthSjmULhYaZFc7pJbGXgLy7ruzszO3e6d+cIXApmbed/deTvffW9hA/8H7gPrgBdiE5iki1CNEOHzA12CItCKEVIH+ukCjMeI8HkoywD3AxPAUMK4soaQSwlzDAE3gH04xgHgqwRRAy7GjH2oIeROzO/PAd9lnMq1kisRpYjkVTnwCBgIjd0BvNEQ8goohH67WS5COL8WgeF2iAjyIzAiefEcWNUQ4XMZeAIcBQ4CCzFjU4nZmyDCZ8Mg+CiqO7CiMW4R2GMjRCdpO82rNkK2Ap9yELwn/AwMYokTDraOCzaB06TEdA6ETOEAyk7MZyjiLbAJRyhltMWWXZwhQZzJ6G6sA0dcCnlhGICyMbeAUWCbcEz2es1wrjlXInbJU0N34acR9iMI9b+KwXy/gC227xPKclwXP/XeUESfxhp9hmJeAw/kkD6VcKG4JzbAdj/XkhaIuGBLKdb7JjH/hbWUialywhS3U665FjVp3OupDo9ZCBlLuWarHUJsfFAhj0IKFkKKeRQympet1cjA2KU1pI2oSW9K8azeocfvduCn5Vp1iXUyye2q9/DLwIxmMcFnxeBAfGYw70vgrpSRDtsW+EwtSkWSOO5OmIj4bWtRXJjGJTnsjstjeVD+nrbYTo/pARvfcm3jRwy3lyuuSM3LCQakEOdlxAWpQqbGbIYiPKEqpabCeQcnvqtcuWArYifwIwcivMCBu9tGyEQOgvdCVD0Tq8aOThF7tUNF7KrE1Ja2wjsZMy6ntW1bYTihCFh10fCJEtOUU7o/otEzr1lMCBtMVU2cinDhTrtWwdbbF+Bsyse1MoD/wslAF8CpiGDjpyzFtjhc0xByRaOlUbZt7HTSlykrnnsUe+WDgZ75hAOpAPbERzUbwBJ/AGHShFfzN0J6AAAAAElFTkSuQmCC" alt="settings">
+            </div>
+            <div id="GeminiStarDiv">
+                <!-- <svg fill="#333333" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path d="M16 8.016A8.522 8.522 0 008.016 16h-.032A8.521 8.521 0 000 8.016v-.032A8.521 8.521 0 007.984 0h.032A8.522 8.522 0 0016 7.984v.032z" fill="#333333"/>
+                </svg> -->
+                
+                <img src="images/gemini_logo.svg" alt="">
+                
+            </div>
+            <div id="GoogleAppsIconDiv">
+                <img src="images/GoogleAppsIcon.png" alt="">
+                
+            </div>
+            <div id="ProfilePhotoDiv">
+                <img src="images/profilepicture.png" alt="">
+            </div>
+        </div>
+
+    <div id="SubContainer">
+        <div id="DivCoveringComposeButtonandLeftPaneOfFolders">
+            <div id="DivCoveringComposeButton">
+            <div id="ComposeButtonDiv">
+                <div id="PencilIconDiv">
+                    <img src="images/icons8-pencil-24.png" alt="">
+                </div>
+                <div id="ComposeTextDiv">
+                    Compose
+                </div>
+
+            </div>
+            </div>
+            <div id="FoldersDivLeft">
+            <div id="InboxDiv">
+                Inbox
+            </div>
+            <div id="StarredDiv">
+                Starred
+            </div>
+            <div id="SnoozedDiv">
+                Snoozed
+            </div>
+            <div id="ImportantDiv">
+                Important
+            </div>
+            <div id="ChatsDiv">
+                Chats
+            </div>
+            <div id="SentDiv">
+                Sent
+            </div>
+            <div id="DraftsDiv">
+                Drafts
+            </div>
+            <div id="AllMailDiv">
+                All Mail
+            </div>
+            <div id="SpanDiv">
+                Span
+            </div>
+            <div id="BinDiv">
+                Bin
+            </div>
+            <div id="Categories">
+                Categories
+            </div>
+            </div>
+        </div>
+        <div id="CenterBodyAndTopDiv">
+            <div id="TopofCenterBodyDiv">
+
+            </div>
+            <div id="CenterBodyContianingEmails">
+                <div id="1stEmail">
+                    1stEmail
+                </div>
+                <div id="2ndEmail">
+                    2ndEmail
+                </div>
+                <div id="3rdEmail">
+                    3rdEmail
+                </div>
+                <div id="4thEmail">
+                    4thEmail
+                </div>
+                <div id="5thEmail">
+                    5thEmail
+                </div>
+                <div id="6thEmail">
+                    6thEmail
+                </div>
+                <div id="7thEmail">
+                    7thEmail
+                </div>
+                <div id="8thEmail">
+                    8thEmail
+                </div>
+                <div id="9thEmail">
+                    9thEmail
+                </div>
+                <div id="10thEmail">
+                    10thEmail
+                </div>
+                <div id="Email11">
+                    Email11
+                </div>
+                <div id="Email12">
+                    Email12
+                </div>
+                <div id="Email13">
+                    Email13
+                </div>
+                <div id="Email14">
+                    Email14
+                </div>
+                <div id="Email15">
+                    Email15
+                </div>
+                <div id="Email16">
+                    Email16
+                </div>
+                <div id="Email17">
+                    Email17
+                </div>
+                <div id="Email18">
+                    Email18
+                </div>
+                <div id="Email19">
+                    Email19
+                </div>
+                <div id="Email20">
+                    Email20
+                </div>
+            </div>
+        </div>
+
+        <div id="RightPaneofIcons">
+            <div id="icon1">
+                Icon
+            </div>
+            <div id="icon2">
+                Icon
+            </div>
+            <div id="icon3">
+                Icon
+            </div>
+            <div id="icon4">
+                Icon
+            </div>
+            <div id="icon5">
+                Icon
+            </div>
+        </div>
+        
+    </div>
+       
+
+    </div>  <!-- ContainerDiv -->
+    
+</body>
+</html>
